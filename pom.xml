@@ -17,6 +17,8 @@
 
     <description>booking</description>
 
+    <packaging>jar</packaging>
+
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -40,11 +42,14 @@
     </dependencies>
 
     <build>
+        <finalName>booking</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <mainClass>dev.dotmatthew.booking.BookingApplication</mainClass>
+                    <executable>true</executable>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
